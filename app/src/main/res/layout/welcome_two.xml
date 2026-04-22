@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.StartPages.WelcomeTwo">
+
+    <!-- ScrollView to enable scrolling -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Wrapper LinearLayout to center the content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/get_started" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seamlessly organize, prioritize,\nand triumph over your to-dos,\nturning every task into a stroke of\naccomplishment with gentle\nreminders leading the way."
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_marginBottom="40dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/getstarted"
+                style="@style/RoundedButtonStyle"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="Get Started"
+                android:textColor="@color/white"
+                android:layout_marginBottom="50dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

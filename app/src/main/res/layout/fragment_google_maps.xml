@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.dashboard.fragments.GoogleMapsFragment"
+    android:fitsSystemWindows="true">
+
+    <!-- Map Fragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp"
+        android:background="@drawable/text_border_edit">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/autoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment">
+        </androidx.fragment.app.FragmentContainerView>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- - - - Click on the map to add a destination - - - -"
+        android:textColor="@color/Gray"
+        android:layout_gravity="center"
+        android:layout_marginBottom="145dp"
+        android:visibility="visible"/>
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/setLocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Location"
+        android:textSize="11sp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:visibility="gone"/>
+
+</FrameLayout>

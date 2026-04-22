@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp"
+    >
+
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:text="Notifications:"
+        android:textSize="12sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textStyle="bold"
+        android:textColor="#07505E"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:id="@+id/notificationsResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="There is no new notifications"
+        android:visibility="invisible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notification_recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

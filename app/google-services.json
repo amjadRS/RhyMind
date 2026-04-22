@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "563278721958",
+    "firebase_url": "https://rhymind-ca4bd-default-rtdb.firebaseio.com",
+    "project_id": "rhymind-ca4bd",
+    "storage_bucket": "rhymind-ca4bd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563278721958:android:f0776e468b1746f5bf1567",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563278721958-4cso0m4kdtaht1ujrnje9coftihhpki4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "b5afb08657bbf2a6384f36182fe46049c5ad90e5"
+          }
+        },
+        {
+          "client_id": "563278721958-mo5aq1hd0j2bcu5quu8jroq1k5gjvhj2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX9xthze9OYcdUb9TpTJ5ucrKX7r3tscc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563278721958-mo5aq1hd0j2bcu5quu8jroq1k5gjvhj2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

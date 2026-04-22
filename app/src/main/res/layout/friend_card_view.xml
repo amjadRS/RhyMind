@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Non-expandable content -->
+            <TextView
+                android:id="@+id/friend_fn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="12dp"/>
+            <TextView
+                android:id="@+id/friend_ln"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/friend_fn"/>
+            <ImageView
+                android:id="@+id/expand_collapse_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_expand_more"/>
+        </RelativeLayout>
+
+        <!-- Expandable content -->
+        <LinearLayout
+            android:id="@+id/expandable_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/friend_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email@email.com"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/friend_phone_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="phone no: 123213"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/friend_relationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="relation: friend"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/friend_addedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

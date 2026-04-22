@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#F4F4F4"
+    tools:context=".ui.auth.EmailVerification">
+
+    <!-- Back Button at Top Left Corner -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="go back"
+        android:padding="5dp"
+        android:elevation="5dp"
+        android:src="@drawable/return_arrow"
+        android:background="@drawable/button_background"
+        app:tint="@color/white" />
+
+    <!-- Content Centered -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Verification Message Text -->
+        <TextView
+            android:id="@+id/verificationMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="message"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_margin="15dp" />
+
+        <!-- Timer Text -->
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend email in: 45s"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Resend Verification Button -->
+        <Button
+            android:id="@+id/resendVerificationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend Verification Email"
+            android:enabled="false"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<!-- res/drawable/search_view_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Set corner radius for rounded edges -->
+    <corners android:radius="16dp" />
+
+    <!-- Define border color and width -->
+    <stroke
+        android:width="2dp"
+        android:color="#008577" /> <!-- Use your preferred border color -->
+
+    <!-- Background color inside the search view -->
+    <solid android:color="#FFFFFF" /> <!-- Background color -->
+</shape>

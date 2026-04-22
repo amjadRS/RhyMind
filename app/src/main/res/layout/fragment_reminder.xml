@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    tools:context=".ui.dashboard.fragments.ReminderFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/eventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:inputType="text"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="30dp"
+            android:hint="Event Title"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:background="@null" />
+
+        <EditText
+            android:id="@+id/eventDescription"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/text_border_edit"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:hint="Event Description"
+            android:scrollHorizontally="false"
+            android:maxLines="5"
+            android:overScrollMode="ifContentScrolls" />
+
+        <!-- Drop-down for selecting a group -->
+        <Spinner
+            android:id="@+id/groupSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:spinnerMode="dropdown"
+            android:entries="@array/placeholder_array" />
+
+        <!-- Multi-selection for selecting multiple groups -->
+        <MultiAutoCompleteTextView
+            android:id="@+id/groupMultiSelect"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/text_border_edit"
+            android:padding="8dp"
+            android:hint="Select Multiple Groups"
+            android:completionThreshold="1" />
+
+        <EditText
+            android:id="@+id/eventCategory"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/text_border_edit"
+            android:padding="8dp"
+            android:inputType="text"
+            android:hint="Event Category" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/eventDate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp"
+                android:inputType="date"
+                android:padding="8dp"
+                android:background="@null"
+                android:hint="Event Date (e.g., 2024-11-18)" />
+
+            <ImageButton
+                android:id="@+id/datePick"
+                android:layout_width="28dp"
+                android:layout_height="33dp"
+                android:background="@drawable/calendar_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:elevation="5dp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/eventStartTime"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:layout_marginBottom="15dp"
+            android:inputType="time"
+            android:background="@null"
+            android:hint="Event Start Time" />
+
+        <EditText
+            android:id="@+id/eventEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="15dp"
+            android:inputType="time"
+            android:padding="8dp"
+            android:background="@null"
+            android:hint="Event End Time" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/eventGoeLoc"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:padding="8dp"
+                android:background="@null"
+                android:hint="Geo Location (Lat, Long)" />
+
+            <ImageButton
+                android:id="@+id/eventLocation"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/location_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addEventButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Add Event"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</ScrollView>

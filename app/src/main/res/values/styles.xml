@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundedButtonStyle">
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:textColor">#FF000000</item> <!-- Optional: Text color -->
+    </style>
+    <style name="gradientCardViewColor1" parent="CardView">
+        <item name="android:foreground">@drawable/gradient_color1</item>
+    </style>
+    <style name="CustomSpinnerStyle">
+        <item name="android:dropDownSelector">@drawable/spinner_dropdown_arrow</item>
+        <item name="android:popupBackground">@drawable/spinner_boarder</item> <!-- Optional: Use custom border for dropdown popup -->
+    </style>
+    <style name="CustomTextInputLayoutStyle">
+        <item name="boxBackgroundColor">#E2880B</item>
+        <item name="boxStrokeColor">#85F232</item>
+    </style>
+</resources>

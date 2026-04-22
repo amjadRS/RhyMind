@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    tools:context=".ui.StartPages.WelcomeOne">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Welcome To RhyMind"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="222dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="60dp"
+            android:text="Where your Tasks Find Wings"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="299dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/learnmore"
+            style="@style/RoundedButtonStyle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:text="Next"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="405dp"
+            tools:ignore="MissingConstraints"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

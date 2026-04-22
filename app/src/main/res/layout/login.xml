@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.LoginActivity">
+
+    <!-- ScrollView for scrolling content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:text="RhyMind"
+                android:textColor="#FD6B22"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/loginlogo"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_below="@id/titleText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/logo"
+                android:contentDescription="LOGO" />
+
+            <TextView
+                android:id="@+id/taglineText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loginlogo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Powerful Reminder Tool"
+                android:textColor="#FF000000" />
+
+            <EditText
+                android:id="@+id/login_email"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/taglineText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/text_border_edit"
+                android:drawablePadding="8dp"
+                android:inputType="textEmailAddress"
+                android:autofillHints="Email"
+                android:hint="Email or username"
+                android:textColor="#FF000000"
+                android:textColorHint="@color/Gray"
+                android:padding="8dp"
+                android:drawableStart="@drawable/email_icon" />
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/text_border_edit"
+                android:drawablePadding="8dp"
+                android:autofillHints="Password"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="#FF000000"
+                android:textColorHint="@color/Gray"
+                android:padding="8dp"
+                android:drawableStart="@drawable/baseline_lock_24" />
+
+            <TextView
+                android:id="@+id/forgotpassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_password"
+                android:layout_alignStart="@id/login_password"
+                android:layout_marginTop="10dp"
+                android:text="Forgot Password?"
+                android:textColor="#FD6B22"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginbutton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/forgotpassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button"
+                android:text="Login"
+                android:textColor="@color/white"
+                style="@style/RoundedButtonStyle" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/googleSignInButton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loginbutton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gray_button"
+                android:text="Sign in with Google"
+                android:textColor="@color/white"
+                style="@style/RoundedButtonStyle" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/googleSignInButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/signUpLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressBar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account?"
+                    android:textColor="#FF000000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/SignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="SignUp"
+                    android:textColor="#FD6B22"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="50dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

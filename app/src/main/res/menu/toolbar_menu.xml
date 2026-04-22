@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_two"
+        android:title="Profile"
+        android:icon="@drawable/notification_bell_icon_32x32"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_one"
+        android:title="Notification"
+        android:scaleType="centerCrop"
+        app:showAsAction="always"
+        app:actionLayout="@layout/toolbar_layout"/>
+    <!--    android:icon="@drawable/logo"  -->
+
+</menu>
+

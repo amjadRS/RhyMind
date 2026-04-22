@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    tools:context=".ui.dashboard.fragments.detailsPages.EventDetails">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:background="#FAFAFA">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+        <ImageButton
+            android:id="@+id/btnReturn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/return_arrow"
+            android:backgroundTint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/tilEventTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/custom_circle_design"
+            android:padding="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tilEventTitle"
+            app:layout_constraintEnd_toEndOf="parent">
+            <ImageButton
+                android:id="@+id/imageButtonId"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/edit_icon"
+                android:backgroundTint="@color/black"
+                 />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/custom_title_design"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/tilEventTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnReturn"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Event Details"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <!-- Event Title -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEventTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Event Title"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/divider1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEventTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_layout_design"
+                android:enabled="false"
+                android:padding="10dp"
+                android:text="Event Title"
+                android:textColor="#4F4F4F"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:dividerColor="#E6E5E5"
+            app:layout_constraintBottom_toTopOf="@+id/tilEventDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilEventTitle" />
+
+        <!-- Event Description -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEventDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="6dp"
+            android:hint="Event Description"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEventDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_layout_design"
+                android:enabled="false"
+                android:padding="8dp"
+                android:text="Event description goes here."
+                android:textColor="#4F4F4F"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:dividerColor="#E6E5E5"
+            app:layout_constraintBottom_toTopOf="@+id/tilEventCategory"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilEventDescription" />
+
+        <!-- Event Category -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEventCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="6dp"
+            android:hint="Category"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/divider3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEventCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_layout_design"
+                android:enabled="false"
+                android:padding="8dp"
+                android:text="Meeting"
+                android:textColor="#4F4F4F"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:dividerColor="#E6E5E5"
+            app:layout_constraintBottom_toTopOf="@+id/tilEventDateTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilEventCategory" />
+        <!-- Button for Changing End Time -->
+        <ImageButton
+            android:id="@+id/btnChangeDate"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/calendar_icon"
+            android:backgroundTint="@color/black"
+            android:contentDescription="Change End Time"
+            android:elevation="5dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+        <ImageButton
+            android:id="@+id/btnChangeStartTime"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="143dp"
+            android:background="@drawable/time_icon"
+            android:backgroundTint="@color/black"
+            android:contentDescription="Change start Time"
+            android:elevation="5dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+        <ImageButton
+            android:id="@+id/btnChangeEndTime"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/time_icon"
+            android:backgroundTint="@color/black"
+            android:contentDescription="Change End Time"
+            android:elevation="5dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+        <!-- Event Date and Time -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEventDateTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="6dp"
+            android:hint="Date &amp; Time"
+            android:textColorHint="@color/black"
+            android:elevation="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/divider4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEventDateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_layout_design"
+                android:enabled="false"
+                android:padding="8dp"
+                android:text="Jan 5, 2025, 10:00 AM - 12:00 PM"
+                android:textColor="#4F4F4F"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/editable_date_time_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/divider4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/divider3">
+
+
+            <!-- Date Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEventDate"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:hint="Event Date"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEventDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_layout_design"
+                    android:enabled="true"
+                    android:padding="8dp"
+                    android:text="2025-01-14"
+                    android:textColor="#4F4F4F"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Start Time Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEventStartTime"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:hint="Start Time"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tilEventDate"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEventStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_layout_design"
+                    android:enabled="false"
+                    android:padding="8dp"
+                    android:text="10:00 AM"
+                    android:textColor="#4F4F4F"
+                    android:textSize="16sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- End Time Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEventEndTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:hint="End Time"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tilEventStartTime"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEventEndTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_layout_design"
+                    android:enabled="true"
+                    android:padding="8dp"
+                    android:text="12:00 PM"
+                    android:textColor="#4F4F4F"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:dividerColor="#E6E5E5"
+            app:layout_constraintBottom_toTopOf="@+id/tilEventLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilEventDateTime" />
+
+        <!-- Event Location -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEventLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Location"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/divider5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEventLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_layout_design"
+                android:enabled="false"
+                android:padding="8dp"
+                android:text="Conference Room A"
+                android:textColor="#4F4F4F"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageButton
+            android:id="@+id/change_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="40dp"
+            android:visibility="invisible"
+            android:background="@drawable/change_location_icon"
+            app:layout_constraintBottom_toTopOf="@+id/divider5"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:dividerColor="#E6E5E5"
+            app:layout_constraintBottom_toTopOf="@+id/tilEventPriority"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilEventLocation" />
+
+        <!-- Event Priority -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEventPriority"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Priority"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEventPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_layout_design"
+                android:enabled="false"
+                android:padding="8dp"
+                android:text="High"
+                android:textColor="#4F4F4F"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Event Weather -->
+        <TextView
+            android:id="@+id/tvEventWeatherLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="18dp"
+            android:text="Weather:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilEventPriority" />
+
+        <TextView
+            android:id="@+id/tvEventWeather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Sunny, 25°C"
+            android:textSize="14sp"
+            android:textColor="#4F4F4F"
+            app:layout_constraintStart_toEndOf="@id/tvEventWeatherLabel"
+            app:layout_constraintTop_toTopOf="@id/tvEventWeatherLabel"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Creation Time -->
+        <TextView
+            android:id="@+id/tvEventCreationTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Created on: Jan 3, 2025"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEventWeather" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

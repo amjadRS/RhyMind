@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchCardView"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/searchEventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Name"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="start|center"/>
+
+        <TextView
+            android:id="@+id/searchEventCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="start|center"/>
+
+        <TextView
+            android:id="@+id/searchEventDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="eventDate"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="end|center"/>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
