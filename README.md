@@ -1,6 +1,6 @@
-# RhyMindMasterMax
+# RhyMind
 
-RhyMindMasterMax is an Android application built with Kotlin that helps users manage reminders and coordinate meetings more effectively using location-based travel time estimation.
+RhyMind is an Android application built with Kotlin that helps users manage reminders and coordinate meetings more effectively using location-based travel time estimation.
 
 ## Features
 - Smart reminder management
