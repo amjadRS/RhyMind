@@ -52,3 +52,6 @@ The application also supports **group meeting coordination**, where each partici
 
 ---
 
+## Author
+Amjad Shahin  
+GitHub: https://github.com/amjadRS
